@@ -2,7 +2,7 @@ import React from 'react'
 import styles from "./page.module.css"
 import Link from 'next/link'
 
-const Portfolio = ({params}) => {
+const Portfolio = () => {
   return (
     <div className={styles.container}>
       <h1 className={styles.heading}>Choose a Gallery</h1>
