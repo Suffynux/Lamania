@@ -1,8 +1,9 @@
 import React from 'react'
 
-const BlogPost = () => {
+const BlogPost = ({params}) => {
+  
   return (
-    <div>BlogPost</div>
+    <div></div>
   )
 }
 

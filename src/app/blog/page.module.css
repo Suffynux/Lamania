@@ -1,3 +1,86 @@
-.container{
-    background-color: brown !important;
-}
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .item {
+    display: flex;
+    gap: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  .img {
+    object-fit: cover; /* This maintains aspect ratio */
+    transition: all 0.3s ease;
+  }
+  
+  /* Hover zoom effect */
+  .imageContainer:hover .img {
+    transform: scale(1.1);
+  }
+  
+  /* Optional: Add a subtle initial animation when page loads */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .imageContainer {
+    position: relative;
+    width: 300px;
+    height: 250px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    overflow: hidden;
+    animation: fadeIn 0.8s ease-out forwards;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Optional: Add a subtle filter effect on hover */
+  .imageContainer:hover .img {
+    filter: brightness(1.1) contrast(1.1);
+  }
+  
+  .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  .title {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  
+  .desc {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.5;
+  }
+  
+  /* Media queries for responsiveness */
+  @media screen and (max-width: 768px) {
+    .item {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .imageContainer {
+      width: 100%;
+      height: 200px;
+    }
+  }   
